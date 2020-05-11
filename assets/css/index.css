@@ -1,0 +1,45 @@
+:root {
+  --color-font-normal:#23273a;
+  --color-font-light:#666666;
+  --color-font-dark:#6F42C1;
+  --color-bg:#FFFFFF;
+
+  --font-normal:'Noto Sans JP', sans-serif;
+  --font-handwrite:'Homemade Apple', cursive;
+}
+
+/*nav css*/
+nav ul li a,nav ul li a:after,nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a{
+  position: relative;
+  font-family: var(--font-normal);
+  color:var(--color-font-normal) !important;
+}
+nav ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--color-font-dark);
+  height: 2px;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+.navbar-brand{
+  font-family:var(--font-handwrite);
+  color:var(--color-font-dark) !important; 
+  text-shadow: 4px 4px 4px #aaa;
+}
+nav {
+  opacity: 0;
+}
+nav .animate__animated{
+  opacity: 1;
+}
