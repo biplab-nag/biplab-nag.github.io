@@ -1,11 +1,20 @@
 :root {
   --color-font-normal:#23273a;
-  --color-font-light:#666666;
+  --color-font-light:#868e96;
   --color-font-dark:#6F42C1;
-  --color-bg:#FFFFFF;
+  --color-white:#FFFFFF;
+  --color-dark:#6F42C1;
+  --color-light:#D9D6DF;
 
-  --font-normal:'Noto Sans JP', sans-serif;
+  --font-normal:'Montserrat', sans-serif;
   --font-handwrite:'Homemade Apple', cursive;
+}
+
+a:hover{
+  text-decoration: none;
+}
+body{
+  background-color: var(--color-white) !important;
 }
 
 /*nav css*/
@@ -42,4 +51,46 @@ nav {
 }
 nav .animate__animated{
   opacity: 1;
+}
+
+/*about css*/
+.about {
+  opacity: 0;
+}
+.about .animate__animated{
+  opacity: 1;
+}
+.about-img{
+  width: 100%;
+}
+.about-head{
+  font-family:var(--font-normal);
+  color:var(--color-font-normal) !important; 
+}
+.about-text{
+  font-family:var(--font-normal);
+  font-size: 1.2rem;
+  color:var(--color-font-light) !important; 
+}
+.img-hand{
+  animation: shake 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform:  rotate(0deg); }
+  10% { transform: rotate(-10deg); }
+  20% { transform: rotate(12deg); }
+  30% { transform: rotate(-10deg); }
+  40% { transform: rotate(9deg); }
+  50% { transform: rotate(0deg); }
+}
+.about-button a{
+  font-family:var(--font-normal);
+  font-size: 0.8em;
+  background-color: var(--color-dark);
+  color:var(--color-white) !important; 
+}
+.about-button a:hover{
+  background-color: var(--color-light);
+  color:var(--color-dark) !important; 
 }
